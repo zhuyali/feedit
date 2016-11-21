@@ -1,0 +1,28 @@
+<header class="navbar">
+  <div class="logout">
+    <a href="/feedit/logout">注销</a>
+  </div>
+</header>
+<div class="container">
+  <div id="search">
+    <form action="" method="get">
+      Keywords:
+      <input type="text" name="search" id="keywords" />
+      <button type="submit" id="submit">Search</button>
+    </form>
+  </div>
+  <div id="content">
+    <ul id="list">
+      {% for item in items %}
+      <li class="item {{ item.read }}" data-url="{{ item.url }}">
+        <span class="title">{{ item.title }}</span>
+        <span class="time">{{ item.create_at }}</span>
+        <button class="remove">删除</button>
+      </li>
+      {% endfor %}
+    </ul>
+  </div>
+</div>
+<script src="/home.js"></script>
+
+

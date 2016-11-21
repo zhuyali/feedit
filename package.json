@@ -1,0 +1,34 @@
+{
+  "name": "feedit",
+  "version": "1.0.0",
+  "description": "feedit",
+  "bin": "./bin/feedit",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zhuyali/feedit.git"
+  },
+  "keywords": [
+    "feedit"
+  ],
+  "author": "zhuyali",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/zhuyali/feedit/issues"
+  },
+  "homepage": "https://github.com/zhuyali/feedit#readme",
+  "dependencies": {
+    "co": "^4.6.0",
+    "koa": "^1.2.4",
+    "koa-bodyparser": "^2.2.0",
+    "koa-route": "^2.4.2",
+    "koa-session": "^3.4.0",
+    "koa-static": "^2.0.0",
+    "mongoose": "^4.6.6",
+    "nunjucks": "^3.0.0",
+    "xutil": "^1.0.3"
+  }
+}

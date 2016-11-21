@@ -1,0 +1,107 @@
+#content {
+  min-height: 500px;
+}
+
+#content li {
+  position: relative;
+  padding-left: 18%;
+  padding-right: 20%;
+  list-style-type: none;
+  cursor: pointer;
+  height: 30px;
+  line-height: 30px;
+  color: #888;
+}
+
+#content {
+  counter-reset: li; /* 初始化计数器 */
+  list-style: none; /* 移除默认的计数 */
+}
+
+#content .true {
+}
+
+#content .false {
+  color: #000;
+}
+
+#content li:hover,
+#content .hover{
+  background: rgba(238, 238, 238, 0.36);
+}
+
+#content li .title {
+  margin-left: 3%;
+}
+
+.logout {
+  margin-top: 20px;
+  float: right;
+  margin-right:20px;
+}
+
+#content li .time {
+  position: relative;
+  float: right;
+  right: 60px;
+}
+
+.container {
+  margin-top: 15px;;
+}
+
+.remove {
+  cursor: pointer;
+  position: relative;
+  float: right;
+  background: #CD5C5C;
+  border-radius: 10px;
+  border: none;
+  box-shadow:
+  0 0 2px rgba(0,0,0,0.1),
+  0 3px 2px rgba(0,0,0,0.1),
+  inset 0 -3px 2px rgba(0,0,0,0.2);
+  font-size: 12px;
+  height: 25px;
+  width: 45px;
+  color: #000000;
+  font-weight:bold;
+  display:none;
+  left: 160px;
+}
+
+#search {
+  text-align: center;
+  padding: 30px 0;
+}
+
+#keywords {
+  height: 25px;
+  width: 190px;
+  padding-left: 5px;
+  padding-right: 5px;
+  font-size: 15px;
+}
+
+.item:before {
+  margin-right: 10px;
+  content: counter(li);
+  counter-increment: li;
+}
+
+#submit {
+  background: #ffffff;
+  border-radius: 2px;
+  border: none;
+  box-shadow:
+  0 0 2px rgba(0,0,0,0.1),
+  0 3px 2px rgba(0,0,0,0.1),
+  inset 0 -3px 2px rgba(0,0,0,0.2);
+  margin-top: 10px;
+  margin-left: 20px;
+  font-size: 14px;
+  height: 30px;
+  width: 70px;
+  color: #777;
+}
+
