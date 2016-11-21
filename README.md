@@ -1,6 +1,6 @@
 # feedit
 
-feedit
+subscribe articals on the web
 
 ## Installation
 
@@ -11,7 +11,7 @@ $ npm install feedit -g
 ## Quick Start
 
 ```
-$ feedit zyl
+$ feedit
 ```
 
 ## License

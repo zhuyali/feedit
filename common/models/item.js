@@ -99,6 +99,23 @@ itemSchema.statics.removeByUrl = function(username, url) {
   })
 };
 
+itemSchema.statics.findByUrl = function(username, url) {
+  let context = this;
+  return new Promise(function(resolve, reject) {
+    context.find({
+      username: username,
+      url: url
+    }, function(err, data) {
+      if (err) {
+        reject(err);
+      } else {
+        resolve(data);
+      }
+    })
+  });
+
+}
+
 itemSchema.statics.add = function(username, title, url) {
   let context = this;
   return new Promise(function(resolve, reject) {

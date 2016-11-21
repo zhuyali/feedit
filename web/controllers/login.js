@@ -1,5 +1,7 @@
 'use strict';
 
+var cryptp = require('crypto');
+
 var config = require('../../lib/config');
 var render = require('../../lib/render');
 var model = require('../../common/models');
@@ -12,6 +14,10 @@ function *login() {
   let username = data.username;
   let password = data.password;
 
+  var md5 = crypto.createHash('md5');
+  md5.update(password);
+  var safePassword = md5.digest('hex');
+
   if (!username || !password) {
     context.info = 'Please input username and password';
     return context;
@@ -19,7 +25,7 @@ function *login() {
 
   try {
     let result = yield user.findByName(username);
-    if (result[0].password === password) {
+    if (result[0].password === safePassword) {
       context.info = 'Login Success';
       var session = {};
       session.username = data.username;

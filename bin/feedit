@@ -2,6 +2,8 @@
 
 'use strict';
 
+var detectPort = require('detect-port');
+
 var args = process.argv.slice(2);
 
 var pkg = require('../package');
@@ -13,4 +15,11 @@ if (args[0] === '-v') {
 
 var server = require('../lib/server');
 
-server.init();
+detectPort(6666, function(err, port) {
+  if (err) {
+    console.log(err);
+    return;
+  }
+  server.init(port);
+});
+

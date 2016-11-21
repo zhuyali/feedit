@@ -1,5 +1,7 @@
 'use strict';
 
+var cryptp = require('crypto');
+
 var config = require('../../lib/config');
 var render = require('../../lib/render');
 var model = require('../../common/models');
@@ -11,6 +13,10 @@ function *register() {
   let data = this.request.body;
   let username = data.username;
   let password = data.password;
+  
+  var md5 = crypto.createHash('md5');
+  md5.update(password);
+  var safePassword = md5.digest('hex');
 
   if (!username || !password) {
     context.info = 'Please input username and password';
@@ -20,7 +26,7 @@ function *register() {
   try {
     let userExists = yield user.findByName(username);
     if (userExists.length === 0) {
-      let result = yield user.add(username, password);
+      let result = yield user.add(username, safePassword);
       context.info = 'Register Success';
     } else {
       context.info = 'Username already exists';
