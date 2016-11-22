@@ -22,6 +22,7 @@
   "homepage": "https://github.com/zhuyali/feedit#readme",
   "dependencies": {
     "co": "^4.6.0",
+    "detect-port": "^1.0.5",
     "koa": "^1.2.4",
     "koa-bodyparser": "^2.2.0",
     "koa-route": "^2.4.2",

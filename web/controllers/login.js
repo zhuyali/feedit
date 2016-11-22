@@ -1,6 +1,6 @@
 'use strict';
 
-var cryptp = require('crypto');
+var crypto = require('crypto');
 
 var config = require('../../lib/config');
 var render = require('../../lib/render');
@@ -25,7 +25,9 @@ function *login() {
 
   try {
     let result = yield user.findByName(username);
-    if (result[0].password === safePassword) {
+    if (result.length === 0) {
+      context.info = 'User not exists';
+    } else if (result[0].password === safePassword) {
       context.info = 'Login Success';
       var session = {};
       session.username = data.username;
@@ -35,7 +37,7 @@ function *login() {
       context.info = 'Wrong Password';
     }
   } catch(e) {
-    context.info = 'User not exists';
+    context.info = 'Login Failed';
   }
 
   return context;

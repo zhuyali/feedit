@@ -15,7 +15,7 @@ if (args[0] === '-v') {
 
 var server = require('../lib/server');
 
-detectPort(6666, function(err, port) {
+detectPort(8888, function(err, port) {
   if (err) {
     console.log(err);
     return;

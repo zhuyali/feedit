@@ -1,6 +1,6 @@
 'use strict';
 
-var cryptp = require('crypto');
+var crypto = require('crypto');
 
 var config = require('../../lib/config');
 var render = require('../../lib/render');
