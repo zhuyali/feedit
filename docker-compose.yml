@@ -1,0 +1,21 @@
+feedit_server:
+  restart: always
+  image: feedit_server
+  ports:
+    - "8080:8080"
+  links:
+    - mongo
+  environment:
+    - DB_SERVICE=mongo
+    - DB_PORT=27017
+    - DB_NAME=feedit
+  volumes:
+    - .:/feedit_server
+  command: bash -c "brew install mongodb && mongod && ./bin/feedit"
+
+mongo:
+  container_name: "feedit_mongo"
+  restart: always
+  image: mongo
+  volumes:
+    - /data/db:/data/db
