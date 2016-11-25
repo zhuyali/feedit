@@ -2,9 +2,6 @@
 
 var mongoose = require('mongoose');
 
-var config = require('../../lib/config');
-
-var db = mongoose.connect(config.database);
 var Schema = mongoose.Schema;
 
 var userSchema = new Schema({
@@ -23,7 +20,6 @@ userSchema.statics.findByName = function(username) {
       username: username
     }, function(err, data) {
       if (err) {
-        console.log(err + '================');
         reject(err);
       } else {
         resolve(data);

@@ -2,4 +2,4 @@
 
 var server =  require('./lib/server.js');
 
-server.init();
+server.init(8080);

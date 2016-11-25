@@ -12,4 +12,4 @@ RUN npm install --registry=https://registry.npm.taobao.org
 
 EXPOSE 8080
 
-CMD ["./bin/feedit"]
+CMD ["node index.js"]
