@@ -1,9 +1,9 @@
 feedit_server:
-  image: feedit_server
+  image: feedit
   ports:
     - "8080:8080"
   links:
-    - mongo:mongo
+    - mongo
   environment:
     - DB_SERVICE=mongo
     - DB_PORT=27017
@@ -15,6 +15,6 @@ feedit_server:
 mongo:
   container_name: "feedit_mongo"
   restart: always
-  image: mongo:latest
+  image: mongo
   volumes:
     - /data/db:/data/db:rw

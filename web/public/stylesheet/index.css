@@ -1,6 +1,42 @@
+html {
+  height: 97%;
+}
+
+body {
+  position: relative;
+  height: 97%;
+  background: url(/images/bg.jpg);
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
 .footer {
   position: absolute;
+  width: 100px;
+  text-align: center;
   bottom: 0px;
-  left: 47%;
-  margin-bottom: 25px;
+  margin-left: 47.5%;
+}
+
+#nav {
+  position: relative;
+  margin-right: 60px;
+  float: right;
+}
+
+#pagination li {
+  list-style: none;
+  float: left;
+}
+
+#pagination li a {
+  display: block;
+  padding: 8px 8px;
+  color: #000;
+  text-decoration: none;
+}
+
+#pagination li a:hover {
+  background: #CD8162;
+  color: #F2F2F2;
 }

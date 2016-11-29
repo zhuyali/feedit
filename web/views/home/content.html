@@ -5,7 +5,7 @@
 </header>
 <div class="container">
   <div id="search">
-    <form action="" method="get">
+    <form method="get">
       Keywords:
       <input type="text" name="search" id="keywords" />
       <button type="submit" id="submit">Search</button>
@@ -21,6 +21,7 @@
       </li>
       {% endfor %}
     </ul>
+    {% include 'common/pagination.html' %}
   </div>
 </div>
 <script src="/home.js"></script>

@@ -1,0 +1,28 @@
+{% if pagination and pagination.total > 1 %}
+<nav id="nav">
+  <ul id="pagination">
+    {% if pagination.current != pagination.previous %}
+    <li>
+      <a href="?search={{ pagination.search }}&page={{ pagination.previous }}">
+        &laquo;
+      </a>
+    </li>
+    {% endif %}
+    {% for i in range(pagination.start, pagination.end + 1) %}
+    <li>
+      <a href="?search={{ pagination.search }}&page={{ i }}">
+        {{ i }}
+      </a>
+    </li>
+    {% endfor %}
+    {% if pagination.current != pagination.next %}
+    <li>
+      <a href="?search={{ pagination.search }}&page={{ pagination.next }}">
+        &raquo;
+      </a>
+    </li>
+    {% endif %}
+  </ul>
+</nav>
+{% endif%}
+

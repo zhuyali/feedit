@@ -26,10 +26,10 @@ var itemSchema = new Schema({
   }
 });
 
-itemSchema.statics.findByCondition = function(username, search, page) {
+itemSchema.statics.findByCondition = function(username, search, page, pageSize) {
   var page = page || 1;
-  let start = (page - 1) * config.pageSize;
-  let limit = config.pageSize;
+  let start = (page - 1) * pageSize;
+  let limit = pageSize;
   let context = this;
   return new Promise(function(resolve, reject) {
     context
@@ -71,7 +71,7 @@ itemSchema.statics.getTotalCount = function(username, search) {
   let context = this;
   return new Promise(function(resolve, reject) {
     context
-      .find({username: username})
+      .where({username: username})
       .count(search ? {'$where': '!!~this.title.toLowerCase().indexOf("' + search + '")'} : {})
       .exec(function(err, data) {
         if (err) {
@@ -113,8 +113,7 @@ itemSchema.statics.findByUrl = function(username, url) {
       }
     })
   });
-
-}
+};
 
 itemSchema.statics.add = function(username, title, url) {
   let context = this;

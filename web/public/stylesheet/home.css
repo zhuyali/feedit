@@ -1,16 +1,22 @@
 #content {
-  min-height: 500px;
+  width: 65%;
+  min-width: 600px;
+  margin: 0 auto;
+}
+
+#search {
+  height: 50px;
+  text-align: center;
+  margin: 20px auto 10px 8%;
 }
 
 #content li {
   position: relative;
-  padding-left: 18%;
-  padding-right: 20%;
   list-style-type: none;
   cursor: pointer;
-  height: 30px;
   line-height: 30px;
   color: #888;
+  overflow: hidden;
 }
 
 #content {
@@ -31,7 +37,7 @@
 }
 
 #content li .title {
-  margin-left: 3%;
+  margin-right: 3%;
 }
 
 .logout {
@@ -47,7 +53,7 @@
 }
 
 .container {
-  margin-top: 15px;;
+  margin-top: 15px;
 }
 
 .remove {
@@ -66,13 +72,8 @@
   width: 45px;
   color: #000000;
   font-weight:bold;
-  display:none;
-  left: 160px;
-}
-
-#search {
-  text-align: center;
-  padding: 30px 0;
+  display: none;
+  left: 143px;
 }
 
 #keywords {

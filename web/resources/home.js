@@ -2,8 +2,6 @@
 
 $('.item').on('click', function() {
 
-  console.log(this);
-
   var url = this.dataset.url;
   var read = $(this).hasClass('true');
 
@@ -12,7 +10,6 @@ $('.item').on('click', function() {
   window.open(url);
 
   if(!read) {
-    console.log('request');
     $.ajax({
       type: 'get',
       url: '/feedit/api',
