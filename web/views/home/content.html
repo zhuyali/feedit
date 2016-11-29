@@ -16,8 +16,10 @@
       {% for item in items %}
       <li class="item {{ item.read }}" data-url="{{ item.url }}">
         <span class="title">{{ item.title }}</span>
-        <span class="time">{{ item.create_at }}</span>
-        <button class="remove">删除</button>
+        <span class="title-right">
+          <span class="time">{{ item.create_at }}</span>
+          <button class="remove">删除</button>
+        </span>
       </li>
       {% endfor %}
     </ul>

@@ -23,9 +23,9 @@ $('.item').on('click', function() {
 });
 
 $('.item').hover(function() {
-  $(this).children(".remove").fadeIn(300);
+  $(this).find(".remove").fadeIn(300);
 }, function() {
-   $(this).children(".remove").fadeOut(300);
+   $(this).find(".remove").fadeOut(300);
 });
 
 $('.remove').on('click', function() {
