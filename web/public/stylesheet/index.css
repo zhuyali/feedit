@@ -1,17 +1,12 @@
+ul {
+  padding: 0;
+}
+
 body {
   margin: 0;
   background: url(/images/bg.jpg);
   overflow-y: auto;
   overflow-x: hidden;
-}
-
-ul {
-  padding: 0;
-}
-
-.footer {
-  text-align: center;
-  margin: 50px 0 20px 0;
 }
 
 #nav {
