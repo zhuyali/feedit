@@ -31,10 +31,10 @@ $('.item').hover(function() {
 $('.remove').on('click', function() {
 
   var listEle = $('#list')[0];
-  var url = this.parentNode.dataset.url;
+  var url = this.parentNode.parentNode.dataset.url;
 
   event.stopPropagation();
-  listEle.removeChild(this.parentNode);
+  listEle.removeChild(this.parentNode.parentNode);
 
   $.ajax({
     type: 'get',

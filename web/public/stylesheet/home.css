@@ -46,7 +46,7 @@
 }
 
 .container {
- padding: 15px 10%;
+  padding: 15px 10%;
 }
 
 .title-right {
@@ -108,15 +108,14 @@
 }
 
 @media screen and (max-width: 500px) {
-  body {
-  }
 
   .container {
-    padding: 10px 5px;
+    padding: 8px 5px;
   }
 
   #content li .time {
     margin: 0;
+    margin-right: 8px;
   }
 
   .title {
@@ -135,5 +134,14 @@
   #search {
     padding-bottom: 15px;
     margin: 10px 0!important;
+  }
+
+  #keywords {
+    border-radius: 10px;
+    background: #f9f9f9;
+  }
+
+  #submit {
+    border-radius: 7px;
   }
 }
