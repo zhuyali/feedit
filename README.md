@@ -17,8 +17,17 @@ $ npm link
 ## Quick Start
 
 ```
+$ mongod //启动mongo数据库
 $ feedit
 ```
+
+## Remark
+
+该程序仅作为服务端使用，对应的客户端请参考
+
+- [Chrome 扩展程序](https://github.com/zhuyali/feedit_chrome)
+- [Android 客户端](https://github.com/zhuyali/Feedit_android)
+- [iOS 客户端](https://github.com/zhuyali/feedit_iOS)
 
 ## License
 
