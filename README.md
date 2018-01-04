@@ -2,10 +2,16 @@
 
 subscribe articals on the web
 
+## prerequisite
+
+mongodb
+
 ## Installation
 
 ```
-$ npm install feedit -g
+$ git clone git@github.com:zhuyali/feedit.git
+$ cnpm i
+$ npm link
 ```
 
 ## Quick Start
